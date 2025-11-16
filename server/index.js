@@ -39,7 +39,7 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import { Queue } from "bullmq";
-import { CustomLocalEmbeddings } from "/home/subhradip-sinha/Desktop/rag_pdf/server/custom-embedding.js";
+import { CustomLocalEmbeddings } from "./custom-embedding.js";
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { GoogleGenAI } from "@google/genai";
 

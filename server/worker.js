@@ -4,7 +4,7 @@ import { QdrantVectorStore } from "@langchain/qdrant";
 import { Document } from "@langchain/core/documents";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { CharacterTextSplitter } from "@langchain/textsplitters";
-import { CustomLocalEmbeddings } from "/home/subhradip-sinha/Desktop/rag_pdf/server/custom-embedding.js";
+import { CustomLocalEmbeddings } from "./custom-embedding.js";
 
 const worker = new Worker(
   "file-upload-queue",
