@@ -42,6 +42,9 @@ import { Queue } from "bullmq";
 import { CustomLocalEmbeddings } from "./custom-embedding.js";
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { GoogleGenAI } from "@google/genai";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 const ai = new GoogleGenAI({
