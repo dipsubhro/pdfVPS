@@ -20,6 +20,13 @@ export default {
 		},
 		extend: {
 			colors: {
+        'palette': {
+            '1': '#03045e',
+            '2': '#0077b6',
+            '3': '#00b4d8',
+            '4': '#90e0ef',
+            '5': '#caf0f8'
+        },
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

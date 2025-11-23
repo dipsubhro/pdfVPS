@@ -70,7 +70,7 @@ const ResizableSplit = () => {
       {/* Resizer handle */}
       <div 
         ref={resizeHandleRef}
-        className="absolute top-0 w-1 h-full bg-slate-200 hover:bg-blue-400 cursor-col-resize z-10 transition-colors duration-150"
+        className="absolute top-0 w-1 h-full bg-slate-200 hover:bg-primary cursor-col-resize z-10 transition-colors duration-150"
         style={{ 
           left: `calc(${splitPosition}% - 2px)`,
           transform: 'translateX(-50%)'

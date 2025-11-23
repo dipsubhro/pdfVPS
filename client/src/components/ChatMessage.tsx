@@ -21,7 +21,7 @@ const ChatMessage = ({ content, role, timestamp }: ChatMessageProps) => {
       {!isUser && (
         <Avatar className="h-8 w-8 mt-1 flex-shrink-0">
           <AvatarImage src="/pdfAI.png" alt="AI" />
-          <AvatarFallback className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+          <AvatarFallback className="bg-gradient-to-br from-palette-3 to-palette-4 text-white">
             AI
           </AvatarFallback>
         </Avatar>
@@ -31,15 +31,15 @@ const ChatMessage = ({ content, role, timestamp }: ChatMessageProps) => {
         className={cn(
           "py-2 px-3 rounded-lg max-w-[85%]",
           isUser
-            ? "bg-blue-600 text-white rounded-tr-none"
-            : "bg-gray-100 text-gray-800 rounded-tl-none"
+            ? "bg-palette-3 text-primary-foreground rounded-tr-none"
+            : "bg-accent text-accent-foreground rounded-tl-none"
         )}
       >
         <p className="whitespace-pre-wrap break-words">{content}</p>
         <p
           className={cn(
             "text-xs mt-1",
-            isUser ? "text-blue-100" : "text-gray-500"
+            isUser ? "text-primary-foreground/80" : "text-muted-foreground"
           )}
         >
           {timestamp.toLocaleTimeString([], {
@@ -52,7 +52,7 @@ const ChatMessage = ({ content, role, timestamp }: ChatMessageProps) => {
       {isUser && (
         <Avatar className="h-8 w-8 mt-1 flex-shrink-0">
           <AvatarImage src="/me.png" alt="User" />
-          <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+          <AvatarFallback className="bg-gradient-to-br from-palette-1 to-palette-2 text-white">
             US
           </AvatarFallback>
         </Avatar>

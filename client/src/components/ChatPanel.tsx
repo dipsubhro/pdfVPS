@@ -101,10 +101,10 @@ const ChatPanel = () => {
 
           {isLoading && (
             <div className="flex gap-2 items-center my-4 animate-fade-in">
-              <div className="h-2 w-2 bg-blue-500 rounded-full animate-pulse-light"></div>
-              <div className="h-2 w-2 bg-blue-500 rounded-full animate-pulse-light delay-300"></div>
-              <div className="h-2 w-2 bg-blue-500 rounded-full animate-pulse-light delay-500"></div>
-              <span className="text-sm text-gray-500">AI is thinking...</span>
+              <div className="h-2 w-2 bg-primary rounded-full animate-pulse-light"></div>
+              <div className="h-2 w-2 bg-primary rounded-full animate-pulse-light delay-300"></div>
+              <div className="h-2 w-2 bg-primary rounded-full animate-pulse-light delay-500"></div>
+              <span className="text-sm text-muted-foreground">AI is thinking...</span>
             </div>
           )}
         </div>

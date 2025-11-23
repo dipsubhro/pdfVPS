@@ -90,13 +90,13 @@ const PDFViewer = () => {
           {isLoading ? (
             <div className="flex flex-col items-center justify-center h-full animate-fade-in">
               <div className="animate-pulse-light flex flex-col items-center gap-4">
-                <FileText className="h-12 w-12 text-gray-400" />
-                <p className="text-gray-500">Loading PDF...</p>
+                <FileText className="h-12 w-12 text-muted-foreground" />
+                <p className="text-muted-foreground">Loading PDF...</p>
               </div>
             </div>
           ) : pdfUrl ? (
             <div className="h-full w-full p-2 animate-fade-in">
-              <div className="bg-gray-100 p-2 mb-2 rounded text-sm overflow-hidden">
+              <div className="bg-accent p-2 mb-2 rounded text-sm overflow-hidden">
                 <p className="truncate"><strong>File:</strong> {pdfName}</p>
               </div>
               <object
@@ -106,7 +106,7 @@ const PDFViewer = () => {
               >
                 <p>
                   It appears your browser doesn't support PDF viewing. You can{" "}
-                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     download the PDF
                   </a>{" "}
                   instead.
@@ -115,10 +115,10 @@ const PDFViewer = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-full p-6 animate-fade-in">
-              <div className="bg-slate-50 p-8 rounded-lg border-2 border-dashed border-slate-200 flex flex-col items-center justify-center max-w-md">
-                <FileText className="h-16 w-16 text-slate-300 mb-4" />
+              <div className="bg-background p-8 rounded-lg border-2 border-dashed border-secondary flex flex-col items-center justify-center max-w-md">
+                <FileText className="h-16 w-16 text-muted-foreground mb-4" />
                 <h3 className="text-lg font-medium mb-2">No PDF uploaded yet</h3>
-                <p className="text-slate-500 text-center mb-4">
+                <p className="text-foreground text-center mb-4">
                   Upload a PDF document to view it here and chat with AI about its contents.
                 </p>
                 <div className="relative w-full">
