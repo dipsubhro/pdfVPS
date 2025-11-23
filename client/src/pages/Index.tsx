@@ -12,7 +12,7 @@ const Index = () => {
     // Call server to clear Qdrant collection on page load/reload
     const clearQdrant = async () => {
       try {
-        await fetch("http://localhost:8000/clear-qdrant", { method: "POST" });
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/clear-qdrant`, { method: "POST" });
       } catch (err) {
         // Silently ignore; this is a best-effort cleanup
         console.error("Failed to clear Qdrant on load:", err);

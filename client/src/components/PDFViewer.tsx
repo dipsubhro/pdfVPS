@@ -30,7 +30,7 @@ const PDFViewer = () => {
 
       try {
         try {
-          await fetch("http://localhost:8000/clear-qdrant", { method: "POST" });
+          await fetch(`${import.meta.env.VITE_API_BASE_URL}/clear-qdrant`, { method: "POST" });
         } catch (err) {
           console.error("Failed to clear Qdrant before upload:", err);
         }
@@ -38,7 +38,7 @@ const PDFViewer = () => {
         const formData = new FormData();
         formData.append("pdf", file);
 
-        const response = await fetch("http://localhost:8000/upload/pdf", {
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/upload/pdf`, {
           method: "POST",
           body: formData,
         });

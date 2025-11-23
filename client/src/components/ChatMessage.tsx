@@ -106,7 +106,7 @@ export default ChatMessage;
 //     setMessages((prev) => [...prev, userMessage]);
 
 //     try {
-//       const res = await fetch(`http://localhost:8000/chat?message=${encodeURIComponent(message)}`);
+//       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/chat?message=${encodeURIComponent(message)}`);
 //       const data = await res.json();
 
 //       const assistantMessage: Imessage = {

@@ -52,7 +52,7 @@ const ChatPanel = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:8000/chat?message=${input}`);
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/chat?message=${input}`);
       const data = await res.json();
 
       const aiMessage: Message = {

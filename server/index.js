@@ -90,7 +90,7 @@ app.use(express.json());
 //   const vectorStore = await QdrantVectorStore.fromExistingCollection(
 //     embeddings,
 //     {
-//       url: "http://localhost:6333",
+//       url: process.env.QDRANT_URL,
 //       collectionName: "langchainjs-testing",
 //     }
 //   );
@@ -120,7 +120,7 @@ app.get("/chat", async (req, res) => {
   const vectorStore = await QdrantVectorStore.fromExistingCollection(
     embeddings,
     {
-      url: "http://localhost:6333",
+      url: process.env.QDRANT_URL,
       collectionName: "langchainjs-testing",
     }
   );
@@ -213,7 +213,7 @@ app.post("/upload/pdf", upload.single("pdf"), async (req, res) => {
 // Endpoint to clear Qdrant collection used by the app. Client will call this on page load/reload.
 app.post("/clear-qdrant", async (req, res) => {
   const collectionName = "langchainjs-testing";
-  const qdrantUrl = `http://localhost:6333/collections/${collectionName}`;
+  const qdrantUrl = `${process.env.QDRANT_URL}/collections/${collectionName}`;
   try {
     // Use native fetch (Node 18+) to delete the collection. If it doesn't exist, Qdrant returns 404.
     const response = await fetch(qdrantUrl, { method: "DELETE" });
